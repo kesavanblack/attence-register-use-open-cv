@@ -42,7 +42,7 @@ class Attendance:
         l2 = Label(f2, text="Project Title", font=("times new roman",20,"bold "),bg="#FAFAFA",fg="#9090EE",width=40).place(x=180,y=50)
 
         b2 = Button(f2, text="ADMIN", command=self.admin, font=("times new roman",16,"bold "), bg="#FAFAFA",fg="#9090EE",width=20).place(x=355,y=250)
-        b3 = Button(f2, text="STUDENT", command=self.student, font=("times new roman",16,"bold "), bg="#FAFAFA",fg="#9090EE",width=20).place(x=355,y=400)
+        b3 = Button(f2, text="EMPLOYEE", command=self.student, font=("times new roman",16,"bold "), bg="#FAFAFA",fg="#9090EE",width=20).place(x=355,y=400)
 
 
 
@@ -91,40 +91,40 @@ class Attendance:
         checker=0;
         from tkinter import ttk, filedialog
 
-        lbl2 = tk.Label(f3, text="Enter Your Name",width=20  ,bg="#FAFAFA",fg="#9090EE"    ,font=('Times New Roman', 15, ' bold ')) 
+        lbl2 = tk.Label(f3, text="Enter Your Employee Name ",width=20  ,bg="#FAFAFA",fg="#9090EE"    ,font=('Times New Roman', 15, ' bold ')) 
         lbl2.place(x=300-x_cord, y=120-y_cord)
 
         self.txt2 = tk.Entry(f3,width=20  ,bg="white"  ,fg="blue",font=('Times New Roman', 15, ' bold ')  )
         self.txt2.place(x=560-x_cord, y=125-y_cord)
         
 
-        lbl = tk.Label(f3, text="Enter Your ID number",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
+        lbl = tk.Label(f3, text="Enter Your Employee ID ",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
         lbl.place(x=300-x_cord, y=170-y_cord)
 
         self.txt = tk.Entry(f3,width=20,bg="white" ,fg="blue",font=('Times New Roman', 15, ' bold '))
         self.txt.place(x=560-x_cord, y=175-y_cord)
 
-        lbl7 = tk.Label(f3, text="Enter Your College Name",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
+        lbl7 = tk.Label(f3, text="Enter Your Employee Branch",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
         lbl7.place(x=300-x_cord, y=220-y_cord)
 
         self.txt7 = tk.Entry(f3,width=20,bg="white" ,fg="blue",font=('Times New Roman', 15, ' bold '))
         self.txt7.place(x=560-x_cord, y=225-y_cord)
           
-        lb3 = tk.Label(f3, text="Department ",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
+        lb3 = tk.Label(f3, text=" Work Department ",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
         lb3.place(x=300-x_cord, y=270-y_cord)
 
         self.txt3 = tk.Entry(f3,width=20,bg="white" ,fg="blue",font=('Times New Roman', 15, ' bold '))
         self.txt3.place(x=560-x_cord, y=275-y_cord)
 
         
-        lb4 = tk.Label(f3, text="Year",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
+        lb4 = tk.Label(f3, text="Employee Experience",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
         lb4.place(x=300-x_cord, y=320-y_cord)
 
         self.txt4 = tk.Entry(f3,width=20,bg="white" ,fg="blue",font=('Times New Roman', 15, ' bold '))
         self.txt4.place(x=560-x_cord, y=325-y_cord)
 
         
-        lb5= tk.Label(f3, text="Section",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
+        lb5= tk.Label(f3, text="Shift",width=20    ,bg="#FAFAFA",fg="#9090EE",font=('Times New Roman', 15, ' bold ') ) 
         lb5.place(x=300-x_cord, y=370-y_cord)
 
         self.txt5 = tk.Entry(f3,width=20,bg="white" ,fg="blue",font=('Times New Roman', 15, ' bold '))
@@ -246,7 +246,7 @@ class Attendance:
         try:
             server = smtplib.SMTP("smtp.gmail.com", 587)
             server.starttls()
-            server.login(sender_email, "wsbpqyzymwtqnxjm")
+            server.login(sender_email, "yqjoxztxfetwqryb")
             server.sendmail(sender_email, recipient_email, message.as_string())
             server.quit()
             success_message = f"Email sent to {recipient_email} successfully."
